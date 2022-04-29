@@ -1,0 +1,15 @@
+git init
+git remote add origin enderecodorepositorio
+
+git pull origin main (caso tenha algo no repositorio)
+git add * (adiciona todos os arquivos para tracked)
+git commit -m "mensagem"
+git push origin main (para o primeiro commit)
+
+
+Obs: se a branch estiver nomeada como "master"
+
+git branch -m main <BRANCH>
+git fetch origin
+git branch -u origin/<BRANCH> <BRANCH>
+git remote set-head origin -a
