@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - order</title>
+    <style>
+        .flex-container {
+        display: flex;
+        border: 1px solid black;
+        max-width: 350px;
+        }
+
+        .item {
+            flex: 1;
+            background-color: chartreuse;
+            color: white;
+            margin: 5px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .o-1 {
+            order: 1;
+        }
+
+        .o-2 {
+            order: -2;
+        }
+
+        .o-3 {
+            order: 3;
+        }
+
+        .column-direction {
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <p>order = 0</p>
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <p>order difetentes</p>
+    <div class="flex-container ">
+        <div class="item o-3">1</div>
+        <div class="item o-3">2</div>
+        <div class="item o-2">3</div>
+        <div class="item o-1">4</div>
+    </div>
+
+    <p>order difetentes em coluna</p>
+    <div class="flex-container column-direction">
+        <div class="item o-3">1</div>
+        <div class="item o-3">2</div>
+        <div class="item o-2">3</div>
+        <div class="item o-1">4</div>
+    </div>
+</body>
+</html>

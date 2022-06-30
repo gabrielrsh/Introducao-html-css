@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex shrink</title>
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+        }
+
+        .item {
+            background-color: black;
+            color: white;
+            margin: 5px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .fg-1 {
+            flex-grow: 1;
+        }
+
+        .s-0 {
+            flex-shrink: 0;
+            flex-basis: 60px;
+        }
+
+        .s-1 {
+            flex-shrink: 1;
+        }
+        
+        .s-2 {
+            flex-shrink: 2;
+            
+        }
+    </style>
+</head>
+<body>
+    <p> Sem flex shrink, flex grow = 1</p>
+    <div class="flex-container">
+        <div class="item fg-1">A</div>
+        <div class="item fg-1">B</div>
+        <div class="item fg-1">C</div>
+        <div class="item fg-1">D</div>
+        <div class="item fg-1">Ead aaa</div>
+        <div class="item fg-1">E</div>
+    </div>
+
+    <p> flex shrink = 1, flex grow = 1 </p>
+    <div class="flex-container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-1 fg-1">B</div>
+        <div class="item s-1 fg-1">C</div>
+        <div class="item s-1 fg-1">D</div>
+        <div class="item s-1 fg-1">Ead aaa</div>
+        <div class="item s-1 fg-1">E</div>
+    </div>
+
+    <p> flex shrink = 0, flex grow = 1 , flex basis = 60px</p>
+    <div class="flex-container">
+        <div class="item s-0 fg-1">A</div>
+        <div class="item s-0 fg-1">B</div>
+        <div class="item s-0 fg-1">C</div>
+        <div class="item s-0 fg-1">DDD </div>
+        <div class="item s-0 fg-1">lorem ipsum t</div>
+        <div class="item s-0 fg-1">E</div>
+    </div>
+
+    <p> flex shrink 1 e 2, flex grow = 1</p>
+    <div class="flex-container">
+        <div class="item s-1 fg-1">AAAAAA</div>
+        <div class="item s-2 fg-1">BBBBBB</div>
+        <div class="item s-1 fg-1">CCCCCC</div>
+        <div class="item s-2 fg-1">DDDDDD</div>
+    </div>
+</body>
+</html>
